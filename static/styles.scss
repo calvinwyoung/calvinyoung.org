@@ -31,53 +31,61 @@ body {
     a {
         color: #777;
         text-decoration: none;
+        border-bottom: 2px solid transparent;
         &:hover {
             color: #444;
+
+            &.twice {
+                border-color: #e14444;
+            }
+            &.linkedIn {
+                border-color: #d9c200;
+            }
+            &.gitHub {
+                border-color: #4183c4;
+            }
+            &.email {
+                border-color: #5da453;
+            }
         }
     }
 
     >.wrap {
+        display: table;
         width: 420px;
-        margin: 250px auto;
+        height: 80%;
+        margin: 0 auto;
 
-        >.headshot {
-            display: block;
-            margin: 0 auto;
-        }
+        >.content {
+            display: table-cell;
+            vertical-align: middle;
 
-        >.greeting {
-            margin-top: 30px;
-        }
-
-        >.intro {
-            margin-top: 30px;
-        }
-
-        >.contactLinks {
-            @include clearfix();
-            margin-top: 30px;
-
-            >.contactLink {
-                float: left;
-                margin-left: 40px;
-
-                &:hover {
-                    border-bottom: 2px solid;
-
-                    &.linkedIn {
-                        border-color: #e14444;
-                    }
-                    &.gitHub {
-                        border-color: #4183c4;
-                    }
-                    &.email {
-                        border-color: #5da453;
-                    }
-                }
+            >.headshot {
+                display: block;
+                margin: 0 auto;
             }
 
-            >.contactLink:first-child {
-                margin-left: 0;
+            >.greeting {
+                margin-top: 30px;
+            }
+
+            >.intro {
+                margin-top: 30px;
+            }
+
+            >.contactLinks {
+                @include clearfix();
+                margin-top: 30px;
+
+                >.contactLink {
+                    display: block;
+                    float: left;
+                    margin-left: 40px;
+                }
+
+                >.contactLink:first-child {
+                    margin-left: 0;
+                }
             }
         }
     }
