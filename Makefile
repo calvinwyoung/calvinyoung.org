@@ -1,7 +1,7 @@
 DEPLOY_DIR = .deploy
 DEPLOY_BRANCH = gh-pages
 ORIGIN_URL = `git config --get remote.origin.url`
-COMMIT_MESSAGE = "Updated site on `date +%m-%d-%Y`."
+COMMIT_MESSAGE = "Updates site on `date +%m-%d-%Y`."
 
 .PHONY: build deploy
 
