@@ -1,0 +1,78 @@
+---
+title: styles.css
+---
+
+// Clearfix mixin. Uses 2 different mixins, actually,
+// where the first is a "private" or helper mixin in order to simplify
+// the coding of the real clearfix mixin.
+@mixin cfbookend() {
+    content: "\0020";
+    display: table;
+    height: 0;
+    overflow: hidden;
+}
+@mixin clearfix() {
+    &:before {
+        @include cfbookend();
+    }
+    &:after {
+        @include cfbookend();
+        clear: both;
+    }
+    zoom: 1;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: 300;
+
+    a {
+        color: #777;
+        text-decoration: none;
+        &:hover {
+            color: #444;
+        }
+    }
+
+    >.wrap {
+        width: 420px;
+        margin: 250px auto;
+
+        >.greeting {
+        }
+
+        >.intro {
+            margin-top: 30px;
+        }
+
+        >.contactLinks {
+            @include clearfix();
+            margin-top: 30px;
+
+            >.contactLink {
+                float: left;
+                margin-left: 40px;
+
+                &:hover {
+                    border-bottom: 2px solid;
+
+                    &.linkedIn {
+                        border-color: #e14444;
+                    }
+                    &.gitHub {
+                        border-color: #4183c4;
+                    }
+                    &.email {
+                        border-color: #5da453;
+                    }
+                }
+            }
+
+            >.contactLink:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
