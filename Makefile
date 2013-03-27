@@ -10,6 +10,9 @@ all: build
 build:
 	jekyll --no-auto
 
+serve:
+	jekyll --server
+
 deploy:	build $(DEPLOY_DIR)
 	rm -rf $(DEPLOY_DIR)/*
 	cp -R _site/* $(DEPLOY_DIR)/
