@@ -8,10 +8,10 @@ COMMIT_MESSAGE = "Updates site on `date +%m-%d-%Y`."
 all: build
 
 build:
-	jekyll --no-auto
+	jekyll build
 
 serve:
-	jekyll --server
+	jekyll serve -w
 
 deploy:	build $(DEPLOY_DIR)
 	rm -rf $(DEPLOY_DIR)/*

@@ -1,3 +1,2 @@
-auto: true
 pygments: true
-exclude: Makefile
+exclude: [Makefile]
