@@ -12,8 +12,8 @@ body a {
 body a:hover {
   color: #444; }
 
-body a:hover.twice {
-  border-color: #e14444; }
+body a:hover.job {
+  border-color: #4475d7; }
 
 body a:hover.linkedIn {
   border-color: #d9c200; }
@@ -26,7 +26,7 @@ body a:hover.email {
 
 body > .wrap {
   display: table;
-  width: 430px;
+  width: 480px;
   height: 80%;
   margin: 0 auto; }
 
