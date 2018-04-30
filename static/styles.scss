@@ -35,8 +35,8 @@ body {
         &:hover {
             color: #444;
 
-            &.twice {
-                border-color: #e14444;
+            &.job {
+                border-color: #4475d7;
             }
             &.linkedIn {
                 border-color: #d9c200;
@@ -52,7 +52,7 @@ body {
 
     >.wrap {
         display: table;
-        width: 430px;
+        width: 480px;
         height: 80%;
         margin: 0 auto;
 
